@@ -20,3 +20,17 @@ void	ft_bzero(void *s, size_t n)
 	while (n--)
 		*str++ = '\0';
 }
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char str[50] = "Hola Mundo!"; // Cadena de texto a ser modificada
+   printf("Antes de memset: %s\n", str); // Imprimir cadena antes de la modificación
+
+   memset(str, '$', 7); // Modificar los primeros 7 caracteres de la cadena con '$'
+
+   printf("Después de memset: %s\n", str); // Imprimir cadena después de la modificación
+
+   return 0;
+}
