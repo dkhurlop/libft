@@ -19,8 +19,10 @@ SRCS =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_memse
 		ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
+OBJSBONUS
 
 DEPS = $(SRCS:.c=.d)
+DEPSBONUS =
 
 CC = gcc
 
@@ -30,14 +32,16 @@ RM = rm -rf
 
 AR = ar rcs
 
-%.o: %.c libft.h Makefile
+%.o: %.c Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
-
 $(NAME): $(OBJS) 
-		 $(AR) $(NAME) $(OBJS)
+	 $(AR) $(NAME) $(OBJS)
 
+-include $(DEPS) 
 all: $(NAME)
+#-include $(DEPS) $(DEPSBONUS)
+
 
 clean:
 	$(RM) $(OBJS) $(DEPS)
