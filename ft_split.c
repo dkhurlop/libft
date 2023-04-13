@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static int	ft_word_counter(char const *s, char c)
+static int	ft_word_counter(char const *s, char c)// c = delimitador desde y hata donde se genera el string, static porque solo sirve para una un script seria "privado" para que no se pueda cambiar ni usar desde afuera.
 {
 	int	i;
 	int	count;
@@ -67,9 +67,9 @@ static char	**ft_fill_tab(char const *s, char c, char **tab)
 	return (tab);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)// guarda los punteros por eso es doble puntero, guarda la posicion de memoria que te lleva al puntero
 {
-	char	**tab;
+	char	**tab;// substring
 
 	if (!s)
 		return (NULL);
@@ -79,3 +79,4 @@ char	**ft_split(char const *s, char c)
 	tab = ft_fill_tab(s, c, tab);
 	return (tab);
 }
+devuelve punteros
