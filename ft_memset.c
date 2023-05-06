@@ -21,3 +21,12 @@ void	*ft_memset(void *b, int c, size_t len)
 		*str++ = c;
 	return (b);
 }
+/*int		main(int argc, const char *argv[])
+{
+	char *tmp;
+
+	tmp = (char *)ft_memset((void *)argv[1], argv[2][0], ft_atoi(argv[3]));
+	ft_putstr_fd(tmp, 1);
+	return (0);
+}
+*/
