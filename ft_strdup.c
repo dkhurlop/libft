@@ -29,3 +29,21 @@ char	*ft_strdup(const char	*s)
 	copy[i] = '\0';
 	return (copy);
 }
+
+/*
+int main() {
+    const char *str = "Hello, World!";
+    
+    char *duplicate = strdup(str);
+    
+    if (duplicate != NULL) {
+        printf("Copia de la cadena: %s\n", duplicate);
+        
+        // Liberar la memoria asignada por strdup
+        free(duplicate);
+    } else {
+        printf("No se pudo duplicar la cadena.\n");
+    }
+    
+    return 0;
+}
