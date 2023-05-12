@@ -28,3 +28,25 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return ((int)(*d1 - *d2));
 }
+
+/*#include <stdio.h>
+#include <string.h>
+
+int main() {
+    const char *str1 = "Hello";
+    const char *str2 = "Hello";
+    int result = memcmp(str1, str2, 5);
+    
+    if (result < 0) {
+        printf("El bloque de memoria apuntado por str1 es lexicográficamente menor que el bloque de memoria apuntado por str2.\n");
+    } else if (result > 0) {
+        printf("El bloque de memoria apuntado por str1 es lexicográficamente mayor que el bloque de memoria apuntado por str2.\n");
+    } else {
+        printf("Ambos bloques de memoria son iguales hasta los primeros 5 bytes.\n");
+    }
+    
+    return 0;
+}
+En este ejemplo, se comparan los primeros 5 bytes de los bloques de memoria apuntados por str1 y str2.
+Como ambos bloques de memoria contienen los mismos caracteres hasta los primeros 5 bytes, el resultado sería: "Ambos bloques de memoria 
+son iguales hasta los primeros 5 bytes.
