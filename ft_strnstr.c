@@ -33,3 +33,22 @@ char	*ft_strnstr(const char	*h, const char	*n, size_t len)
 	}
 	return (0);
 }
+
+/*falta libreria
+int main() {
+    const char *str = "Hello, World!";
+    const char *sub = "World";
+    
+    char *result = strnstr(str, sub, strlen(str));
+    
+    if (result != NULL) {
+        printf("Subcadena encontrada: %s\n", result);
+    } else {
+        printf("Subcadena no encontrada.\n");
+    }
+    
+    return 0;
+}
+En este ejemplo, hemos definido nuestra propia implementación de strnstr 
+que realiza una búsqueda de subcadenas limitada por el número máximo de caracteres len.
+Luego, en el main, utilizamos nuestra función strnstr para buscar la subcadena "World" dentro de la cadena "Hello, World!
