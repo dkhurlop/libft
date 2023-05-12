@@ -24,3 +24,17 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + 1);
 	return (NULL);
 }
+/*
+int main() {
+    const char *str = "Hello, World!";
+    char ch = 'o';
+    char *result = strrchr(str, ch);
+    
+    if (result != NULL) {
+        printf("El carácter '%c' se encontró en la posición %ld desde el final de la cadena.\n", ch, strlen(str) - (result - str));
+    } else {
+        printf("El carácter '%c' no se encontró en la cadena.\n", ch);
+    }
+    
+    return 0;
+}
