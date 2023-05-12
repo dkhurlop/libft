@@ -25,3 +25,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		*d++ = *s++;
 	return (dst);
 }
+/*falta librería 
+int main() {
+    const char source[] = "Hola, Mundo!";
+    char destination[20];
+    size_t num = sizeof(source);
+    
+    memcpy(destination, source, num);
+    
+    printf("El contenido copiado es: %s\n", destination);
+    
+    return 0;
+}
